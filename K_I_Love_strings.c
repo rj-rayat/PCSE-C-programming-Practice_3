@@ -1,0 +1,40 @@
+
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    while(n--)
+    {
+        char s[51], t[51];
+        scanf("%s %s", s, t);
+
+        int len_s = strlen(s);
+        int len_t = strlen(t);
+
+        int i;
+        for (i = 0; i < len_s && i < len_t; i++)
+        {
+            printf("%c%c", s[i], t[i]);
+        }
+
+       if (i < len_s)
+       {
+            for (i; i < len_s; i++)
+            {
+                printf("%c", s[i]);
+            }
+       }
+       if (i < len_t)
+       {
+            for (i; i < len_t; i++)
+            {
+                printf("%c", t[i]);
+            }
+       }
+        printf("\n");
+    }
+
+    return 0;
+}
